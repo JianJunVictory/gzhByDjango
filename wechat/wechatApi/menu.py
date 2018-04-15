@@ -84,27 +84,3 @@ menu ="""{
         }
     ]
 }"""
-# {
-#         "name":"公众平台",
-#         "sub_button":[
-#             {
-#                 "type":"view",
-#                 "name":"更新公告",
-#                 "url":"http://mp.weixin.qq.com/wiki"
-#             },
-#             {
-#                 "type":"view",
-#                 "name":"接口权限说明",
-#                 "url":"https://www.python.org/"
-#             },
-#             {
-#                 "type":"view",
-#                 "name":"返回码说明",
-#                 "url":"https://github.com/"
-#             }]
-#     },
-#     {
-#         "type":"media_id",
-#         "name":"旅行",
-#         "media_id":"z2zOokJvlzCXXNhSjF46gdx6rSghwX2xOD5GUV9nbX4"
-#     }
