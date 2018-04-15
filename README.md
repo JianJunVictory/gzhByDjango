@@ -9,7 +9,7 @@
 5.内网透传工具ngrok,使用免费版,域名是变化的，每次域名变化，需要的工程设置文件中,修改ALLOWED_HOSTS,将域名填写进步,例如：此项目中web文件夹下的settings.py中的ALLOWED_HOSTS = ['c0520119.ngrok.io']
 
 ### 开发环境搭建
-1.安装python3.6，到官网现在python安装文件，自行安装，安装完成后，验证下环境路径。  
+1.安装python3.6，到官网下载python安装文件，自行安装，安装完成后，验证下环境路径。  
 2.安装django,使用pip 命令安装。如果没有pip命令，请自行上网查询安装。pip install django  
 3.创建项目,App。请到[django官网](https://docs.djangoproject.com/zh-hans/2.0/)查看django教程    
 
