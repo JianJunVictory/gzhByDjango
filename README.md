@@ -6,7 +6,7 @@
 2.Django 1.11.0  
 3.数据库使用Django自带的sqlite3  
 4.windows系统  
-5.内网透传工具ngrok,使用免费版,域名是变化的，每次域名变化，需要的工程里,修改ALLOWED_HOSTS,将域名填写进步,例如：此项目中web文件夹下的settings.py中的ALLOWED_HOSTS = ['c0520119.ngrok.io']
+5.内网透传工具ngrok,使用免费版,域名是变化的，每次域名变化，需要的工程设置文件中,修改ALLOWED_HOSTS,将域名填写进步,例如：此项目中web文件夹下的settings.py中的ALLOWED_HOSTS = ['c0520119.ngrok.io']
 
 ### 开发环境搭建
 1.安装python3.6，到官网现在python安装文件，自行安装，安装完成后，验证下环境路径。  
@@ -23,6 +23,8 @@
 ├─web  //项目文件  
 └─wechat  //文件公众号app  
 &nbsp;&nbsp; ├─migrations  
-&nbsp;&nbsp; └─wechatApi  
+&nbsp;&nbsp; └─wechatApi  //微信接口，例如菜单创建，删除，获取等等
+
+
 
 
