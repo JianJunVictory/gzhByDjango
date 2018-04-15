@@ -10,9 +10,10 @@ Prefix="https://api.weixin.qq.com/cgi-bin/"
 class Wechat(Option):
     def __init__(self):
         super(Wechat,self).__init__()
+
+    #处理access_token的api
     def fetchAccessToken(self):
         tokenData=self.getAccessToken()
-        print(tokenData)
         if tokenData["access_token"] and tokenData["expires_in"]:
             if self.isValidToken(tokenData):
                 return tokenData
@@ -31,6 +32,7 @@ class Wechat(Option):
             return False
         else:
             return True
+
     def updateToken(self):
         nowTime=int(time.time())
         url=Prefix+'token'
@@ -39,21 +41,36 @@ class Wechat(Option):
         AccessData=rsp.json()
         AccessData['expires_in']=nowTime+(AccessData['expires_in']-20)*1000
         return AccessData
-    def creatMenu(self):
+
+    #创建，删除，获取菜单api，个性化菜单此处省略
+    def creatMenu(self,menu=menu):
         AccessData=self.fetchAccessToken()
-        print(AccessData["access_token"])
         url=Prefix+'menu/create?access_token='+AccessData["access_token"]
-        # headers = {'content-type': 'application/json'}
-        # if isinstance(menu, str):
-        #     menu = menu.encode('utf-8')
         rsp=requests.post(url,data=menu.encode('utf-8'))
         respData=rsp.json()
-        print(respData)
+        if respData["errcode"]==0:
+            return True
+        else:
+            return False
+    
+    def deteleMenu(self):
+        AccessData=self.fetchAccessToken()
+        url=Prefix+'menu/delete?access_token='+AccessData["access_token"]
+        rsp=requests.get(url)
+        respData=rsp.json()
         if respData["errcode"]==0:
             return True
         else:
             return False
 
+    def getMenu(self):
+        AccessData=self.fetchAccessToken()
+        url=Prefix+'menu/get?access_token='+AccessData["access_token"]
+        rsp=requests.get(url)
+        respData=rsp.json()
+        return respData
+
+    #素材管理接口
 
         
         
