@@ -15,11 +15,6 @@
 
 ### 代码结构
 ├─.vscode  
-├─myApp  //个人测试文件，与公众号没关系  
-│  ├─migrations  
-│  │   
-│  ├─templates  
-│  │  └─myApp  
 ├─web  //项目文件  
 └─wechat  //文件公众号app  
 &nbsp;&nbsp; ├─migrations  
