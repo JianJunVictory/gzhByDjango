@@ -121,14 +121,14 @@ class TextMsg(Msg):
 
 def bind(request):
     auth=AuthPage()
-    appID="wx2e0eb153224d114c"
+    appID="wx2"
     redirect_uri="http://as.inrok.io/wx/bindPage"
     scope="snsapi_base"
     url="https://open.weixin.qq.com/connect/oauth2/authorize?appid="+appID+"&redirect_uri="+redirect_uri+"&response_type=code&scope="+scope+"&state=STATE#wechat_redirect"
     return HttpResponseRedirect(url)
 
 def bindPage(request,code):
-    appID="wx2e0eb153224d114c"
+    appID="wx2"
     url="https://api.weixin.qq.com/sns/oauth2/access_token?appid="+appID+"&secret=SECRET&code="+code+"&grant_type=authorization_code"
     rsp=requests.get(url)
     AccessData=rsp.json()
